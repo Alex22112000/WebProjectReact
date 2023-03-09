@@ -1,5 +1,4 @@
 
-
 export default function() {return `
   	<div align="center" class="auth">
   		<c-label value="Авторизация" >	 	</c-label>

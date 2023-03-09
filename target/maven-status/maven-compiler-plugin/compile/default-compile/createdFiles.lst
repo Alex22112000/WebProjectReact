@@ -1,4 +1,5 @@
 modelLayer\IModel.class
+Filter.class
 DBlayer\IDBController.class
 builder\Builder.class
 DBlayer\DBpool.class

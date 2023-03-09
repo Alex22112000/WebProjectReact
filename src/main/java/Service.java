@@ -44,10 +44,12 @@ public class Service {
 			return Response.ok().build();
 		}
 		
-		return Response.status(Response.Status.BAD_REQUEST).entity("501").build();
+		return Response
+		.status(Response.Status.BAD_REQUEST)
+		.entity("501").build();
 		
  	}
-	
+
 	// отправка данных с браузера
 	// путь к ресурсу
 	// тип данных, которые придут от браузера
@@ -114,17 +116,17 @@ public class Service {
  	}
 	
 	
-	@DELETE
+	@POST
 	@Path("catalogs/product-catalog/del")
+	@Consumes("application/json")
 	@Produces("text/plain")
-	public Response delProd(@Context HttpServletRequest request, @Context HttpServletResponse response) throws Exception 
+	public Response delProd(String fileJSON) throws Exception 
  	{            
-		String name =  request.getHeader("name").strip();;   
-		System.out.println("================" + name + "======================================");
-		
+		// System.out.println("================" + name + "======================================");
+
 		Jsonb jsonb = JsonbBuilder.create();          
-		List<String> nameOfProd = jsonb.fromJson(name, List.class);
-	 	
+		List<String> nameOfProd = jsonb.fromJson(fileJSON, List.class);
+
 	 	boolean res = model.delProduct(nameOfProd.get(0));
 		
 		if(res) {

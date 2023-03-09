@@ -18,8 +18,6 @@ export default function(func) {return `
 		<br>
 
 		<li class="btBack">								<c-button value="Назад">				</c-button></li>
-		<br>
-		<br>
 
 		<div class="message">																	</div>
 	</ul>            

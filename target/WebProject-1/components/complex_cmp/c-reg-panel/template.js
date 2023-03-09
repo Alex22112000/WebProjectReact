@@ -1,5 +1,4 @@
 
-
 export default function() {return `
   	<div align="center" class="regstr">
   		<c-label 	value="Регистрация">					</c-label>

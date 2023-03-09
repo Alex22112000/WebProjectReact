@@ -1,5 +1,4 @@
 
-
 class busketProduct{
 	constructor(index, prod_id, prod_name, img_src, cost){
 		this.index				= index;
